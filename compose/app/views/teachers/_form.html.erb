@@ -1,0 +1,41 @@
+<%= form_with(model: teacher, local: true) do |form| %>
+  <% if teacher.errors.any? %>
+    <div id="error_explanation">
+      <h5 style="color:red;"><%= "Błąd." %> Nie udało się zapisać tego ucznia:</h5>
+
+      <ul>
+      <% teacher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+  <div class="btn-group form-inline">
+    <%= form.label :imie , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :imie %>
+  </div>
+
+  <div class="btn-group form-inline">
+    <%= form.label :nazwisko , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :nazwisko %>
+  </div>
+
+  <div class="btn-group form-inline">
+    <%= form.label :pesel , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :pesel %>
+  </div>
+
+  <div class="btn-group form-inline">
+    <%= form.label :subject_id, :class => "btn btn-warning btn-sm"%>
+    <%= form.collection_select :subject_id, Subject.all, :id, :nazwa, {}, { class: "form-control" } %>
+  </div>
+
+<p>
+  <div class="actions form-inline">
+    <%= form.submit 'Zapisz', :class => "btn btn-dark btn-sm"%>
+  </div>
+</p>
+
+</div>
+<% end %>

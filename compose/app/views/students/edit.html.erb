@@ -1,0 +1,12 @@
+<div class="container">
+<br>
+<h2><p>Edycja uczniów</p></h2>
+<hr />
+<%= render 'form', student: @student %>
+</br>
+
+<center>
+	<%= link_to 'Wyświetl', @student , :class => "btn btn-dark btn-sm"%> |
+	<%= link_to 'Wróć', students_path , :class => "btn btn-dark btn-sm"%>
+</center>
+</div>

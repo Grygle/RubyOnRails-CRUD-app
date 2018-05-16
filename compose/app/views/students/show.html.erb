@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+	    <div class="d-inline-block">
+        <h4>Dane ucznia : <%= @student.imie %> <%= @student.nazwisko %></h4>
+    </div>
+    <hr />
+<p>
+  <strong>Imie:</strong>
+  <%= @student.imie %>
+</p>
+
+<p>
+  <strong >Nazwisko:</strong>
+  <%= @student.nazwisko %>
+</p>
+
+<p>
+  <strong>Pesel:</strong>
+  <%= @student.pesel %>
+</p>
+
+<p>
+  <strong>Klasa:</strong>
+  <%= @student.klasa %>
+</p>
+<center>
+  <%= link_to 'Edytuj', edit_student_path(@student) , :class => "btn btn-warning btn-sm"%> |
+  <%= link_to 'Wróć', students_path , :class => "btn btn-warning btn-sm"%>
+</center>

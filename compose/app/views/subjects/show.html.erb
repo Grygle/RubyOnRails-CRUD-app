@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+	    <div class="d-inline-block">
+        <h4>Przedmiot : <%= @subject.nazwa %></h4>
+    </div>
+    <hr />
+<p>
+  <strong>Nazwa:</strong>
+  <%= @subject.nazwa %>
+</p>
+
+<p>
+  <strong >Opis:</strong>
+  <%= @subject.opis %>
+</p>
+
+<center>
+  <%= link_to 'Edytuj', edit_subject_path(@subject) , :class => "btn btn-warning btn-sm"%> |
+  <%= link_to 'Wróć', subjects_path , :class => "btn btn-warning btn-sm"%>
+</center>

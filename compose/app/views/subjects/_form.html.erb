@@ -1,0 +1,32 @@
+<%= form_with(model: subject, local: true) do |form| %>
+  <% if subject.errors.any? %>
+    <div id="error_explanation">
+      <h5 style="color:red;"><%= "Błąd." %> Nie udało się zapisać tego przedmiotu:</h5>
+
+      <ul>
+      <% subject.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+  <div class="btn-group form-inline">
+    <%= form.label :nazwa , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :nazwa %>
+  </div>
+
+  <div class="btn-group form-inline">
+    <%= form.label :opis , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :opis %>
+  </div>
+
+
+<p>
+  <div class="actions form-inline">
+    <%= form.submit 'Zapisz', :class => "btn btn-dark btn-sm"%>
+  </div>
+</p>
+
+</div>
+<% end %>

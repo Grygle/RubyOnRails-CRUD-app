@@ -1,0 +1,12 @@
+<div class="container">
+<br>
+<h2><p>Edycja nauczycieli</p></h2>
+<hr />
+<%= render 'form', teacher: @teacher %>
+</br>
+
+<center>
+	<%= link_to 'Wyświetl', @teacher , :class => "btn btn-dark btn-sm"%> |
+	<%= link_to 'Wróć', teachers_path , :class => "btn btn-dark btn-sm"%>
+</center>
+</div>

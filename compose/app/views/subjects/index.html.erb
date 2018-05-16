@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<center><h1>Lista przedmiotów</h1></center>
+<div class="container">
+
+
+<%= form_tag(subjects_path, method: :get , id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Znajdź przedmiot" %>
+    <%= submit_tag "Szukaj", name: nil, class: "btn btn-warning btn-sm" %>
+<% end %>
+
+<% if @subjects.blank? %>
+  <h4>Nie istnieje uczeń '<%= params[:search] %>'.</h4>
+<% end %>
+
+
+<center><%= link_to 'Dodaj nowy przedmiot', new_subject_path, :class => "btn btn-warning btn-sm" %></center>
+</br>
+<table class="table table-stripped table-hover">
+
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subjects.each do |subject| %>
+      <tr>
+        <td><%= subject.nazwa %></td>
+        <td><%= subject.opis %></td>
+        <td><%= link_to 'Wyświetl', subject, :class => "btn btn-dark btn-sm" %></td>
+        <td><%= link_to 'Edytuj', edit_subject_path(subject) , :class => "btn btn-warning btn-sm" %></td>
+        
+       <td><%= link_to 'Usuń', subject, method: :delete, data: { confirm: 'Czy na pewno chcesz usunąć?' }, :class => "btn btn-dark btn-sm"  %></td>
+      <!--   <td><%= link_to 'Usuń', subjects_path , :class => "btn btn-dark btn-sm"%></td>-->
+    <% end %>
+  </tbody>
+</table>
+     <%= link_to 'Anuluj szukanie', subjects_path , :class => "btn btn-dark btn-sm"%>
+
+</div>
+<br>

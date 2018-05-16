@@ -1,0 +1,12 @@
+<div class="container">
+<br>
+<h2><p>Edycja przedmiotów</p></h2>
+<hr />
+<%= render 'form', subject: @subject %>
+</br>
+
+<center>
+	<%= link_to 'Wyświetl', @subject , :class => "btn btn-dark btn-sm"%> |
+	<%= link_to 'Wróć', subjects_path , :class => "btn btn-dark btn-sm"%>
+</center>
+</div>

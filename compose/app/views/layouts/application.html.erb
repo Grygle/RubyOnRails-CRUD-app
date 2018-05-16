@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUD uczniów</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	    <div class="container">
+		    <div class="navbar-header">
+                <a class="navbar-brand" href="/">StartPage</a>
+                <a class="navbar-brand" href="students">Students</a>
+                <a class="navbar-brand" href="subjects">Subjects</a>
+                <a class="navbar-brand" href="teachers">Teachers</a>
+		    </div>
+
+        <div class="navbar-right">
+                <a class="navbar-brand" href="admin">Panel administratora</a>
+                <!--<a class="navbar-brand" href="pages/register">Rejestracja</a>-->
+        </div>
+
+    </nav>
+    <%= yield %>
+  </body>
+
+    <hr />
+  <footer>
+    <p style="text-align: center;">&copy; 03.2018 Juliusz Gryglewski</p>
+</footer>
+
+</html>

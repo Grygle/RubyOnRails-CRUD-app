@@ -1,0 +1,42 @@
+<%= form_with(model: student, local: true) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h5 style="color:red;"><%= "Błąd." %> Nie udało się zapisać tego ucznia:</h5>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+  <div class="btn-group form-inline">
+    <%= form.label :imie , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :imie %>
+  </div>
+
+  <div class="btn-group form-inline">
+    <%= form.label :nazwisko , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :nazwisko %>
+  </div>
+
+  <div class="btn-group form-inline">
+    <%= form.label :pesel , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :pesel %>
+  </div>
+
+  <!--<div class="form form-inline">-->
+  <div class="btn-group form-inline">
+    <%= form.label :klasa , :class => "btn btn-warning btn-sm"%>
+    <%= form.text_field :klasa %>
+  </div>
+
+<p>
+  <div class="actions form-inline">
+    <%= form.submit 'Zapisz', :class => "btn btn-dark btn-sm"%>
+  </div>
+</p>
+
+</div>
+<% end %>
