@@ -6,7 +6,32 @@
 
 ## Projekt na egzamin
 - CRUD umożliwiający dodawanie uczniów, nauczycieli i przedmiotów.
-- zawiera framework Active Admin, który dodaje panel administratora
+
+## Active Admin
+- projekt zawiera framework Active Admin, który dodaje panel administratora
+
+**Do uruchomienia wymagane jest dodanie gemów:**
+
+>gem 'devise'
+
+>gem 'activeadmin', github: 'activeadmin'
+
+>gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+**Następnie w konsoli generujemy pliki**
+
+>rails generate active_admin:install
+
+**Aby dodać konto administratora z poziomu konsoli należy:**
+
+Uruchomić rails console
+
+Dodać konto administratora, np:
+
+>AdminUser.create(:email => 'admin@admin.com', :password => 'password', :password_confirmation => 'password')
+
+**W celu dodania modeli do panelu administratora należy wykonać polecenie:**
+>rails generate active_admin:resource Nazwa_modelu
 
 ## Docker
 
