@@ -7,3 +7,8 @@
 ## Projekt na egzamin
 - CRUD umożliwiający dodawanie uczniów, nauczycieli i przedmiotów.
 - zawiera framework Active Admin, który dodaje panel administratora
+
+## Docker
+
+- Link do Docker Hub -
+https://hub.docker.com/r/julek200/compose/
