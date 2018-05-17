@@ -37,3 +37,23 @@ Dodać konto administratora, np:
 
 - Link do Docker Hub -
 https://hub.docker.com/r/julek200/compose/
+
+**Uruchomienie:**
+
+1. Docker pull julek200/compose
+2. Docker-compose up
+
+
+**Przydatne polecenia**
+
+- Wyswietlenie obrazow : docker images
+
+- Wyswietlenie kontenerow : docker ps -a
+
+- Zatrzymanie : docker-compose stop
+
+Jesli po uruchomieniu aplikacji pojawia sie informacja: 
+
+- A server is already running. Check /../tmp/pids/server.pid.
+
+Należy z folderu pids usunąć plik ‚server.pid’
