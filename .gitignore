@@ -30,3 +30,13 @@
 /config/master.key
 
 .DS_Store
+compose/log/development.log
+compose/tmp/cache/assets/sprockets/v3.0/06/06AcMWrnmRKiGS9z30lGgdCg2XHgXMlYhMwTEE7z_sQ.cache
+compose/tmp/cache/assets/sprockets/v3.0/0w/0WfKd6eevwvjJtXj4VTVtnKqXYOvr1Aknss-s2fO8Kc.cache
+/compose/tmp/*
+*.cache
+*.cache
+compose/tmp/cache/assets/sprockets/v3.0/yK/yK_QdC7sT_LdOtOfeHsj2SIywFql1h8Iu9FivyDtU_0.cache
+compose/log/development.log
+compose/tmp/cache/assets/sprockets/v3.0/6I/6IdJ5Y312R9capInHN2M-Vyji7WQkqOzNsBgpeJMQG4.cache
+compose/tmp/cache/assets/sprockets/v3.0/HC/HCDOUd7-S45aJ_PjVAC_Vmjyud3i1aQv4cE3t9_Z3Dw.cache

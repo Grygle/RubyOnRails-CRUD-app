@@ -22776,3 +22776,142 @@ Processing by StudentsController#index as HTML
 Completed 200 OK in 547ms (Views: 525.9ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-22 14:00:21 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grygle/.rvm/rubies/ruby-2.5.0/lib/ruby/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by PagesController#info as HTML
+  Rendering pages/info.html.erb within layouts/application
+  Rendered pages/info.html.erb within layouts/application (11692.7ms)
+Completed 200 OK in 12368ms (Views: 12353.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:00:40 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 193ms (Views: 185.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:05:21 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grygle/.rvm/rubies/ruby-2.5.0/lib/ruby/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 928ms (Views: 912.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:05:24 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 166ms (Views: 161.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?utf8=%E2%9C%93&search=zuz" for 127.0.0.1 at 2018-06-22 14:05:29 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"zuz"}
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE (imie LIKE '%zuz%' OR nazwisko LIKE '%zuz%' OR klasa LIKE '%zuz%') ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 150ms (Views: 146.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:05:30 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 149ms (Views: 143.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:06:20 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grygle/.rvm/rubies/ruby-2.5.0/lib/ruby/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 954ms (Views: 940.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2018-06-22 14:06:24 +0200
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" ORDER BY created_at DESC[0m
+  ↳ app/views/subjects/index.html.erb:11
+  Rendered subjects/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 157ms (Views: 149.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2018-06-22 14:06:25 +0200
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" ORDER BY created_at DESC[0m
+  ↳ app/views/teachers/index.html.erb:11
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:36
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:36
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:36
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:36
+  Rendered teachers/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 202ms (Views: 194.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-22 14:06:26 +0200
+Processing by PagesController#info as HTML
+  Rendering pages/info.html.erb within layouts/application
+  Rendered pages/info.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 163ms (Views: 158.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:06:27 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 143ms (Views: 136.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:07:04 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grygle/.rvm/rubies/ruby-2.5.0/lib/ruby/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 798ms (Views: 780.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:07:05 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 171ms (Views: 165.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-06-22 14:07:07 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY created_at DESC[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 149ms (Views: 143.7ms | ActiveRecord: 0.3ms)
+
+
